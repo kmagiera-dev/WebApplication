@@ -1,10 +1,11 @@
 ﻿using System.Data.Entity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System.Data.Entity.ModelConfiguration.Conventions;
+using Repository.IRepo;
 
 namespace Repository.Models
 {
-    public class ApplicationDbContext : IdentityDbContext
+    public class ApplicationDbContext : IdentityDbContext, IApplicationContext
     {
         public ApplicationDbContext()
             : base("DefaultConnection")

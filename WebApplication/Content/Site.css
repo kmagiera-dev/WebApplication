@@ -3,6 +3,18 @@
     padding-bottom: 20px;
 }
 
+tr:first-child{
+background-color:#efefef;
+}
+
+tr:hover td{
+background-color:#efefef;
+}
+
+.btn {
+margin:2px;
+}
+
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
