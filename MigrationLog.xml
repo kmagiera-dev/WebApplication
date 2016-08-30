@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type='text/xsl' href='_MigrationReport_Files/MigrationReport.xslt'?>
+<UpgradeLog>
+<Properties>
+<Property Name="Solution" Value="d:\documents\kmagiera\documents\visual studio 2015\Projects\WebApplication\WebApplication.sln"></Property>
+<Property Name="Solution File" Value="d:\documents\kmagiera\documents\visual studio 2015\Projects\WebApplication"></Property>
+<Property Name="Date" Value="30/08/2016 09:56:06"></Property>
+</Properties>
+<Event ErrorLevel="3" Project="WebApplication" Source="BundleConfig.cs" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="FilterConfig.cs" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="IdentityConfig.cs" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="RouteConfig.cs" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="Startup.Auth.cs" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="ApplicationInsights.config" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="bootstrap-theme.css" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="bootstrap-theme.css.map" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="bootstrap-theme.min.css" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="bootstrap-theme.min.css.map" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="bootstrap.css" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="bootstrap.css.map" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="bootstrap.min.css" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="bootstrap.min.css.map" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="Site.css" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="AccountController.cs" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="HomeController.cs" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="ManageController.cs" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="DataSet.Designer.cs" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="DataSet.xsc" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="DataSet.xss" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="favicon.ico" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="glyphicons-halflings-regular.eot" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="glyphicons-halflings-regular.svg" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="glyphicons-halflings-regular.ttf" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="glyphicons-halflings-regular.woff" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="glyphicons-halflings-regular.woff2" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="Global.asax.cs" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="ManageViewModels.cs" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="packages.config" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="Project_Readme.html" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="AssemblyInfo.cs" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="Settings.Designer.cs" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="_references.js" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="ai.0.22.9-build00167.js" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="ai.0.22.9-build00167.min.js" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="bootstrap.js" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="bootstrap.min.js" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="jquery-3.1.0.intellisense.js" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="jquery-3.1.0.js" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="jquery-3.1.0.min.js" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="jquery-3.1.0.min.map" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="jquery-3.1.0.slim.js" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="jquery-3.1.0.slim.min.js" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="jquery-3.1.0.slim.min.map" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="jquery.validate-vsdoc.js" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="jquery.validate.js" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="jquery.validate.min.js" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="jquery.validate.unobtrusive.js" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="jquery.validate.unobtrusive.min.js" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="modernizr-2.8.3.js" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="respond.js" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="respond.matchmedia.addListener.js" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="respond.matchmedia.addListener.min.js" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="respond.min.js" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="Startup.cs" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="_ViewStart.cshtml" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="_ExternalLoginsListPartial.cshtml" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="ConfirmEmail.cshtml" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="ExternalLoginConfirmation.cshtml" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="ExternalLoginFailure.cshtml" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="ForgotPassword.cshtml" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="ForgotPasswordConfirmation.cshtml" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="Login.cshtml" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="Register.cshtml" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="ResetPassword.cshtml" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="ResetPasswordConfirmation.cshtml" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="SendCode.cshtml" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="VerifyCode.cshtml" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="About.cshtml" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="Contact.cshtml" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="Index.cshtml" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="AddPhoneNumber.cshtml" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="ChangePassword.cshtml" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="Index.cshtml" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="ManageLogins.cshtml" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="SetPassword.cshtml" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="VerifyPhoneNumber.cshtml" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="_Layout.cshtml" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="_LoginPartial.cshtml" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="Error.cshtml" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="Lockout.cshtml" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="Web.config" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="Web.Debug.config" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication" Source="Web.Release.config" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication.Tests" Source="App.config" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication.Tests" Source="HomeControllerTest.cs" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication.Tests" Source="packages.config" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="WebApplication.Tests" Source="AssemblyInfo.cs" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="Repository" Source="ApplicationInsights.config" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="Repository" Source="201608291803248_init.cs" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="Repository" Source="Configuration.cs" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="Repository" Source="IdentityModels.cs" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="Repository" Source="Order.cs" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="Repository" Source="Product.cs" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="Repository" Source="User.cs" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="Repository" Source="AccountViewModels.cs" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="Repository" Source="packages.config" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="Repository" Source="AssemblyInfo.cs" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="Repository" Source="ai.0.22.9-build00167.js" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="Repository" Source="ai.0.22.9-build00167.min.js" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="Repository" Source="Web.Debug.config" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="Repository" Source="Web.Release.config" Description="No need to convert"></Event>
+
+</UpgradeLog>
