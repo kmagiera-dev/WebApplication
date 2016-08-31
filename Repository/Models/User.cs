@@ -19,14 +19,12 @@ namespace Repository.Models
         }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        #region  notmapped
         [NotMapped] 
-        [Display(Name = "Pan/Pani:")]
+        [Display(Name = "Full Name:")]
         public string FullName
         {
             get { return FirstName + " " + LastName; }
         }
-        #endregion
         public virtual ICollection<Order> Orders { get; private set; }
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<User> manager)
