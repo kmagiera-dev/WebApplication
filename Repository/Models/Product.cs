@@ -13,10 +13,10 @@ namespace Repository.Models
         }
         [Display(Name = "Id:")]
         public int Id { get; set; }
-        [Display(Name = "Nazwa:")]
+        [Display(Name = "Name:")]
         [MaxLength(100)]
         public string Name { get; set; }
-        [Display(Name = "Opis:")]
+        [Display(Name = "Description:")]
         [MaxLength(500)]
         public string Description { get; set; }
     }
