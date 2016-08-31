@@ -55,33 +55,42 @@ namespace Repository.Migrations
                 }
             }
 
-            if (!context.Users.Any(u => u.UserName == "client1"))
+            for (int i = 1; i < 10; i++)
             {
-                var user = new User { UserName = "client1@AspNetMvc.pl" };
-                var adminresult = manager.Create(user, "1234678");
-                if (adminresult.Succeeded)
+                string userName = "client" + i;
+                if (!context.Users.Any(u => u.UserName == userName))
                 {
-                    manager.AddToRole(user.Id, "Client");
+                    var user = new User { UserName = userName + "@AspNetMvc.pl" };
+                    var adminresult = manager.Create(user, "1234678");
+                    if (adminresult.Succeeded)
+                    {
+                        manager.AddToRole(user.Id, "Client");
+                    }
                 }
             }
         }
 
         private void SeedOrders(ApplicationDbContext context)
         {
-            var userId = context.Set<User>()
-                    .Where(u => u.UserName == "Admin@AspNetMvc.pl")
-                    .FirstOrDefault().Id;
-            for (int i = 1; i <= 10; i++)
+            Random orderId = new Random((int)DateTime.Now.Ticks);
+            Random orderValue = new Random((int)DateTime.Now.Ticks);
+            for (int i = 1; i < 10; i++)
             {
-                var order = new Order()
+                string userName = "client" + i + "@AspNetMvc.pl";
+                var userId = context.Set<User>()
+                    .Where(u => u.UserName == userName)
+                    .FirstOrDefault().Id;
+                for (int j = 1; j <= 10; j++)
                 {
-                    Id = i,
-                    UserId = userId,
-                    OrderId = new Random().Next(int.MaxValue/2, int.MaxValue).ToString(),
-                    OrderDate = DateTime.Now.AddDays(-i),
-                    OrderValue = (new Random().NextDouble() * 1000).ToString(String.Format("C",2)),
-                };
-                context.Set<Order>().AddOrUpdate(order);
+                    var order = new Order()
+                    {
+                        UserId = userId,
+                        OrderId = orderId.Next(1, int.MaxValue).ToString(),
+                        OrderDate = DateTime.Now.AddDays(-j),
+                        OrderValue = (orderValue.NextDouble() * 1000).ToString(String.Format("C", 2)),
+                    };
+                    context.Set<Order>().AddOrUpdate(order);
+                }
             }
             context.SaveChanges();
         }
