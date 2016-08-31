@@ -160,9 +160,9 @@
     <Compile Include="IRepo\IApplicationContext.cs" />
     <Compile Include="IRepo\IOrderRepository.cs" />
     <Compile Include="IRepo\IProductRepository.cs" />
-    <Compile Include="Migrations\201608291803248_init.cs" />
-    <Compile Include="Migrations\201608291803248_init.Designer.cs">
-      <DependentUpon>201608291803248_init.cs</DependentUpon>
+    <Compile Include="Migrations\201608310017442_init.cs" />
+    <Compile Include="Migrations\201608310017442_init.Designer.cs">
+      <DependentUpon>201608310017442_init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -175,8 +175,8 @@
     <Compile Include="Repo\ProductRepository.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201608291803248_init.resx">
-      <DependentUpon>201608291803248_init.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201608310017442_init.resx">
+      <DependentUpon>201608310017442_init.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

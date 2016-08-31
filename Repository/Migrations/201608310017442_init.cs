@@ -12,7 +12,9 @@ namespace Repository.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
+                        OrderId = c.String(),
                         OrderDate = c.DateTime(nullable: false),
+                        OrderValue = c.String(),
                         UserId = c.String(nullable: false, maxLength: 128),
                     })
                 .PrimaryKey(t => t.Id)
