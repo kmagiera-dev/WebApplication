@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Repository.Models;
+using Microsoft.AspNet.Identity;
 using Repository.IRepo;
 
 namespace WebApplication.Controllers
@@ -23,7 +24,10 @@ namespace WebApplication.Controllers
         // GET: Orders
         public ActionResult Index()
         {
+            string userId = User.Identity.GetUserId();
             var orders = _repo.GetOrders();//db.Orders.Include(o => o.User);
+            orders = orders.OrderByDescending(o => o.OrderDate)
+                .Where(o => o.UserId == userId);
             return View(orders);
         }
 
