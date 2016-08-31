@@ -33,6 +33,12 @@ namespace Repository.Migrations
                 role.Name = "Admin";
                 roleManager.Create(role);
             }
+            if (!roleManager.RoleExists("Client"))
+            {
+                var role = new Microsoft.AspNet.Identity.EntityFramework.IdentityRole();
+                role.Name = "Client";
+                roleManager.Create(role);
+            }
         }
 
         private void SeedUsers(ApplicationDbContext context)
@@ -41,11 +47,21 @@ namespace Repository.Migrations
             var manager = new UserManager<User>(store);
             if (!context.Users.Any(u => u.UserName == "Admin"))
             {
-                var user = new User { UserName = "Admin" };
+                var user = new User { UserName = "Admin@AspNetMvc.pl" };
                 var adminresult = manager.Create(user, "12345678");
                 if (adminresult.Succeeded)
                 {
                     manager.AddToRole(user.Id, "Admin");
+                }
+            }
+
+            if (!context.Users.Any(u => u.UserName == "client1"))
+            {
+                var user = new User { UserName = "client1@AspNetMvc.pl" };
+                var adminresult = manager.Create(user, "1234678");
+                if (adminresult.Succeeded)
+                {
+                    manager.AddToRole(user.Id, "Client");
                 }
             }
         }
