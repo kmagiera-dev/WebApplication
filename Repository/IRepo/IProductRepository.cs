@@ -15,5 +15,6 @@ namespace Repository.IRepo
         void Edit(Product product);
         void DeleteProduct(int id);
         void SaveChanges();
+        IQueryable GetPage(int? page, int? pageSize);
     }
 }

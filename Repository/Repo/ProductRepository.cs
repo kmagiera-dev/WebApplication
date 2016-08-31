@@ -47,5 +47,14 @@ namespace Repository.Repo
         {
             _db.SaveChanges();
         }
+
+        public IQueryable GetPage(int? page = 1, int? pageSize = 10)
+        {
+            var products = _db.Products
+                .OrderBy(p => p.Name)
+                .Skip((page.Value - 1) * pageSize.Value)
+                .Take(pageSize.Value);
+            return products;
+        }
     }
 }

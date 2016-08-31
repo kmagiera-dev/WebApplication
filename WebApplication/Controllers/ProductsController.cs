@@ -9,6 +9,7 @@ using System.Web.Mvc;
 using Repository.Models;
 using Repository.Repo;
 using Repository.IRepo;
+using PagedList;
 
 namespace WebApplication.Controllers
 {
@@ -22,10 +23,13 @@ namespace WebApplication.Controllers
         }
 
         // GET: Products
-        public ActionResult Index()
+        public ActionResult Index(int? page)
         {
+            int currentPage = page ?? 1;
+            int pageSize = 10;
             var products = _repo.GetProducts();
-            return View(products);
+            products = products.OrderBy(p=>p.Name);
+            return View(products.ToPagedList<Product>(currentPage, pageSize));
         }
 
         // GET: Products/Details/5
@@ -46,7 +50,7 @@ namespace WebApplication.Controllers
         }
 
         // GET: Products/Create
-       // [Authorize]
+        [Authorize]
         public ActionResult Create()
         {
             return View();
@@ -55,6 +59,7 @@ namespace WebApplication.Controllers
         // POST: Products/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Name,Description")] Product product)
@@ -76,6 +81,7 @@ namespace WebApplication.Controllers
         }
 
         // GET: Products/Edit/5
+        [Authorize]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -87,12 +93,17 @@ namespace WebApplication.Controllers
             {
                 return HttpNotFound();
             }
+            else if(!(User.IsInRole("Admin")))
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
             return View(product);
         }
 
         // POST: Products/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "Id,Name,Description")] Product product)
@@ -101,7 +112,6 @@ namespace WebApplication.Controllers
             {
                 try
                 {
-                    //product.Id = 111;
                     _repo.Edit(product);
                     _repo.SaveChanges();
                 }
@@ -117,6 +127,7 @@ namespace WebApplication.Controllers
         }
 
         // GET: Products/Delete/5
+        [Authorize]
         public ActionResult Delete(int? id, bool? error)
         {
             if (id == null)
@@ -128,6 +139,10 @@ namespace WebApplication.Controllers
             {
                 return HttpNotFound();
             }
+            else if (!(User.IsInRole("Admin")))
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
             if (error != null)
             {
                 ViewBag.Error = true;
@@ -136,6 +151,7 @@ namespace WebApplication.Controllers
         }
 
         // POST: Products/Delete/5
+        [Authorize]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

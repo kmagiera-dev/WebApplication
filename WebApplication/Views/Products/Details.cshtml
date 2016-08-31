@@ -30,5 +30,8 @@
 </div>
 <p>
     @Html.ActionLink("Back to List", "Index", new { id = Model.Id }, new { @class = "btn btn-link" })  
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }, new { @class = "btn btn-info" })     
+    @if (User.Identity.IsAuthenticated && (User.IsInRole("Admin")))
+    {
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }, new { @class = "btn btn-info" })
+    }
 </p>
