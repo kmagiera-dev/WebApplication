@@ -16,9 +16,9 @@ namespace Repository.Repo
             _db = db;
         }
 
-        public IQueryable<Order> GetOrders()
+        public IQueryable<Order> GetOrders(string userId)
         {
-            return _db.Orders.AsNoTracking();
+            return _db.Orders.AsNoTracking().Where(o => o.UserId == userId);
         }
     }
 }

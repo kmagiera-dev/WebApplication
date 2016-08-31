@@ -9,6 +9,6 @@ namespace Repository.IRepo
 {
     public interface IOrderRepository
     {
-        IQueryable<Order> GetOrders();
+        IQueryable<Order> GetOrders(string userId);
     }
 }

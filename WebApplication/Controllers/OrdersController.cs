@@ -25,9 +25,8 @@ namespace WebApplication.Controllers
         public ActionResult Index()
         {
             string userId = User.Identity.GetUserId();
-            var orders = _repo.GetOrders();//db.Orders.Include(o => o.User);
-            orders = orders.OrderByDescending(o => o.OrderDate)
-                .Where(o => o.UserId == userId);
+            var orders = _repo.GetOrders(userId);
+            orders = orders.OrderByDescending(o => o.OrderDate);
             return View(orders);
         }
 
