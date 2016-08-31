@@ -44,6 +44,7 @@ namespace WebApplication.App_Start
             container.RegisterType<AccountController>(new InjectionConstructor());
             container.RegisterType<ManageController>(new InjectionConstructor());
             container.RegisterType<IProductRepository, ProductRepository>(new PerRequestLifetimeManager());
+            container.RegisterType<IOrderRepository, OrderRepository>(new PerRequestLifetimeManager());
             container.RegisterType<IApplicationContext, ApplicationDbContext> (new PerRequestLifetimeManager());
         }
     }

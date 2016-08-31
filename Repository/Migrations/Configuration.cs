@@ -69,7 +69,7 @@ namespace Repository.Migrations
         private void SeedOrders(ApplicationDbContext context)
         {
             var userId = context.Set<User>()
-                    .Where(u => u.UserName == "Admin")
+                    .Where(u => u.UserName == "Admin@AspNetMvc.pl")
                     .FirstOrDefault().Id;
             for (int i = 1; i <= 10; i++)
             {
@@ -77,7 +77,9 @@ namespace Repository.Migrations
                 {
                     Id = i,
                     UserId = userId,
-                    OrderDate = DateTime.Now.AddDays(-i)
+                    OrderId = new Random().Next(int.MaxValue/2, int.MaxValue).ToString(),
+                    OrderDate = DateTime.Now.AddDays(-i),
+                    OrderValue = (new Random().NextDouble() * 1000).ToString(String.Format("C",2)),
                 };
                 context.Set<Order>().AddOrUpdate(order);
             }
