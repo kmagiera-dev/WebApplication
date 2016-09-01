@@ -62,7 +62,7 @@ namespace WebApplication.Controllers
         [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Name,Description")] Product product)
+        public ActionResult Create([Bind(Include = "Name,Description,Price")] Product product)
         {
             if (ModelState.IsValid)
             {
@@ -74,9 +74,11 @@ namespace WebApplication.Controllers
                 }
                 catch
                 {
+                    ViewBag.Error = true;
                     return View(product);
                 }
             }
+            ViewBag.Error = true;
             return View(product);
         }
 
@@ -106,14 +108,16 @@ namespace WebApplication.Controllers
         [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Name,Description")] Product product)
+        public ActionResult Edit([Bind(Include = "Id,Name,Description,Price")] Product product)
         {
+            ViewBag.Error = true;
             if (ModelState.IsValid)
             {
                 try
                 {
                     _repo.Edit(product);
                     _repo.SaveChanges();
+                    ViewBag.Error = false;
                 }
                 catch
                 {
@@ -122,7 +126,6 @@ namespace WebApplication.Controllers
                 }
                 
             }
-            ViewBag.Error = false;
             return View(product);
         }
 
