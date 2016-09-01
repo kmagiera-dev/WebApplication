@@ -131,7 +131,7 @@ namespace Repository.Migrations
                     Id = i,
                     Name = "Product " + i.ToString(),
                     Description = "Description " + i.ToString(),
-                    Price = Convert.ToDecimal(price.NextDouble() * 100),
+                    Price = Convert.ToDecimal(Math.Round((price.NextDouble() * 100), 2)),
                 };
                 context.Set<Product>().AddOrUpdate(product);
             }
