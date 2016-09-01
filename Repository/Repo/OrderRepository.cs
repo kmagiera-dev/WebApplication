@@ -21,6 +21,11 @@ namespace Repository.Repo
             return _db.Orders.AsNoTracking().Where(o => o.UserId == userId);
         }
 
+        public IQueryable<Order> GetAllOrders()
+        {
+            return _db.Orders.AsNoTracking();
+        }
+
         public IQueryable<OrderItem> GetItems(string orderId)
         {
             return _db.OrderItems.AsNoTracking().Where(i => i.OrderId == orderId);

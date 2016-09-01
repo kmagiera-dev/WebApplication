@@ -26,7 +26,15 @@ namespace WebApplication.Controllers
         public ActionResult Index()
         {
             string userId = User.Identity.GetUserId();
-            var orders = _repo.GetOrders(userId);
+            IQueryable<Order> orders = Enumerable.Empty<Order>().AsQueryable(); ;
+            if ((User.IsInRole("Client")))
+            {
+                orders = _repo.GetOrders(userId);
+            }
+            else if ((User.IsInRole("Admin")))
+            {
+                orders = _repo.GetAllOrders();
+            }
             orders = orders.OrderByDescending(o => o.OrderDate);
             return View(orders);
         }
