@@ -18,6 +18,7 @@ namespace Repository.Models
         }
 
         public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderItem> OrderItems { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<User> User { get; set; }
 
@@ -30,6 +31,10 @@ namespace Repository.Models
             modelBuilder.Entity<Order>().HasRequired(x => x.User)
                 .WithMany(x => x.Orders)
                 .HasForeignKey(x => x.UserId)
+                .WillCascadeOnDelete(true);
+            modelBuilder.Entity<OrderItem>().HasRequired(x => x.Order)
+                .WithMany(x => x.Items)
+                .HasForeignKey(x => x.OrderId)
                 .WillCascadeOnDelete(true);
         }
     }

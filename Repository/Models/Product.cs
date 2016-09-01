@@ -21,5 +21,9 @@ namespace Repository.Models
         [Display(Name = "Description:")]
         [MaxLength(500)]
         public string Description { get; set; }
+        [Display(Name = "Price:")]
+        [DisplayFormat(DataFormatString = "{0:C2}")]
+        [DataType("Currency")]
+        public decimal Price { get; set; }
     }
 }

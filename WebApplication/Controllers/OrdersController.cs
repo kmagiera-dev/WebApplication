@@ -22,6 +22,7 @@ namespace WebApplication.Controllers
         }
 
         // GET: Orders
+        [Authorize]
         public ActionResult Index()
         {
             string userId = User.Identity.GetUserId();
@@ -30,20 +31,21 @@ namespace WebApplication.Controllers
             return View(orders);
         }
 
-        //// GET: Orders/Details/5
-        //public ActionResult Details(int? id)
-        //{
-        //    if (id == null)
-        //    {
-        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-        //    }
-        //    Order order = db.Orders.Find(id);
-        //    if (order == null)
-        //    {
-        //        return HttpNotFound();
-        //    }
-        //    return View(order);
-        //}
+        // GET: Orders/Details/5
+        [Authorize]
+        public ActionResult Details(string id)
+        {
+            if (id == null || (!User.Identity.IsAuthenticated))
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            var items = _repo.GetItems(id);
+            if (items == null)
+            {
+                return HttpNotFound();
+            }
+            return View(items);
+        }
 
         //protected override void Dispose(bool disposing)
         //{

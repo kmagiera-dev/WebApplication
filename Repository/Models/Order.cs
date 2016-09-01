@@ -12,9 +12,10 @@ namespace Repository.Models
         public Order()
         {
             this.Product = new HashSet<Product>();
+            this.Items = new HashSet<OrderItem>();
         }
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+        //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        //public int Id { get; set; }
         [Display(Name = "Order Id:")]
         public string OrderId { get; set; }
         [Display(Name = "Order date:")]
@@ -24,6 +25,7 @@ namespace Repository.Models
         [Display(Name = "Order value:")]
         public string OrderValue { get; set; }
         public virtual ICollection<Product> Product { get; set; }
+        public virtual ICollection<OrderItem> Items { get; set; }
         public string UserId { get; set; }
         public virtual User User { get; set; }
     }

@@ -10,5 +10,6 @@ namespace Repository.IRepo
     public interface IOrderRepository
     {
         IQueryable<Order> GetOrders(string userId);
+        IQueryable<OrderItem> GetItems(string orderId);
     }
 }

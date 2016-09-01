@@ -12,6 +12,7 @@ namespace Repository.IRepo
     public interface IApplicationContext
     {
         DbSet<Order> Orders { get; set; }
+        DbSet<OrderItem> OrderItems { get; set; }
         DbSet<Product> Products { get; set; }
         DbSet<User> User { get; set; }
         int SaveChanges();
