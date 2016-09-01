@@ -14,7 +14,7 @@
         <th>
             @if (User.Identity.IsAuthenticated && (User.IsInRole("Admin")))
             {
-                @Html.DisplayNameFor(model => model.UserId)
+                @Html.DisplayNameFor(model => model.User.UserName)
             }
         </th>
         <th>
@@ -34,7 +34,7 @@
         <td>
             @if (User.Identity.IsAuthenticated && (User.IsInRole("Admin")))
             {
-                @Html.DisplayFor(modelItem => item.UserId)
+                @Html.DisplayFor(modelItem => item.User.UserName)
             }
         </td>
         <td>
